@@ -1,8 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
+
 
 function NavBar(){
 
     return(
+        
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <a href="#" className="navbar-brand mx-4">AnimeWorld</a>
 
@@ -17,7 +20,7 @@ function NavBar(){
             <ul class="navbar-nav ms-auto">
                     
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Animes</a>
+                        <Link to="/animes" className="nav-link">Animes</Link>
                     </li>
 
                     
@@ -39,6 +42,7 @@ function NavBar(){
 
             </div>
         </nav> 
+
     )
 }
 
