@@ -4,7 +4,7 @@ import Titulo from '../components/Titulo';
 import Estoria from '../components/Estoria';
 import CardAnime from '../components/CardAnime';
 
-import onePieceBanner from '../assets/imgs/banner one piece.jpg';
+import images from '../assets/assets';
 
 function Animes(){
     return(
@@ -14,7 +14,7 @@ function Animes(){
 
             <div className="row row-cols-1 row-cols-md-3 g-4"> 
                 <CardAnime 
-                    foto={onePieceBanner} 
+                    foto={images.onePieceBanner} 
                     titulo="One Piece"
                     descricao="Uma aventura épica que segue Monkey D. Luffy e sua tripulação em busca do tesouro lendário conhecido como One Piece. O anime combina ação, humor e momentos emocionantes enquanto explora amizade, liberdade e grandes batalhas em um mundo cheio de ilhas incríveis."
                     meta="Manga Capitulos: 1144; Anime Episodios: 1149" />
