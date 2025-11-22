@@ -25,7 +25,7 @@ function NavBar(){
 
                     
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Animações</a>
+                        <Link to="/animacoes" className="nav-link">Animações</Link>
                     </li>
 
                     
