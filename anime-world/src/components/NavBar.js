@@ -30,7 +30,7 @@ function NavBar(){
 
                     
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Galeria</a>
+                        <Link to="/galeria" className="nav-link">Galeria</Link>
                     </li>
 
                     
