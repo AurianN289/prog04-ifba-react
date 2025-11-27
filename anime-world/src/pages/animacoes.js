@@ -16,8 +16,7 @@ function Animacoes(){
                 <CardAnime 
                     foto={images.yutakaNakamura} 
                     titulo="yutaka Nakamura"
-                    descricao="Yutaka Nakamura é um dos animadores mais influentes da animação 2D japonesa, conhecido por cenas de ação extremamente fluidas, uso marcante de “impact frames” e seus famosos “cubes.” Ele trabalhou em obras como Cowboy Bebop, FMA: Brotherhood e My Hero Academia, deixando uma marca única com movimentos dinâmicos e cheios de energia."
-                    meta="Manga Capitulos: 1144; Anime Episodios: 1149" />
+                    descricao="Yutaka Nakamura é um dos animadores mais influentes da animação 2D japonesa, conhecido por cenas de ação extremamente fluidas, uso marcante de “impact frames” e seus famosos “cubes.” Ele trabalhou em obras como Cowboy Bebop, FMA: Brotherhood e My Hero Academia, deixando uma marca única com movimentos dinâmicos e cheios de energia." />
             </div>
         </div>
     )
