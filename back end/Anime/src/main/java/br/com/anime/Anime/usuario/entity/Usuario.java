@@ -21,9 +21,12 @@ import lombok.Setter;
 public class Usuario extends PersistenceEntity implements Serializable {
     
     @Column(name = "nome", nullable = false)
+    @NotBlank(message = "O nome é obrigatório")
     @Getter @Setter private String nome;
     
     @Column(name = "email", nullable = false)
+    @Email(message = "E-mail inválido")
+    @NotBlank(message = "O e-mail é obrigatório")
     @Getter @Setter private String email;
     
 }

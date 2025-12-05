@@ -1,46 +1,41 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
 package br.com.anime.Anime.usuario.controller;
 
 import br.com.anime.Anime.usuario.entity.Usuario;
+import br.com.anime.Anime.usuario.service.UsuarioIService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
-import br.com.anime.Anime.usuario.service.UsuarioIService;
-/**
- *
- * @author aurian
- */
-@Controller
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/usuarios")
 @RequiredArgsConstructor
-public class UsuarioController implements UsuarioIController{
-    private final UsuarioIController usuarioIController;
-    
-    @Override
+public class UsuarioController {
+
+    private final UsuarioIService service;
+
+    @GetMapping
     public List<Usuario> findAll() {
-        return usuarioIController.findAll();
+        return service.findAll();
     }
 
-    @Override
-    public void save(Usuario usuario) {
-        usuarioIController.save(usuario);
+    @GetMapping("/{id}")
+    public Usuario findById(@PathVariable Long id) {
+        return service.findById(id);
     }
 
-    @Override
-    public void update(Usuario usuario) {
-        alunoIService.update(usuario);
+    @PostMapping
+    public Usuario save(@Valid @RequestBody Usuario usuario) {
+        return service.save(usuario);
     }
 
-    @Override
-    public void delete(Usuario usuario) {
-        alunoIService.delete(usuario); 
+    @PutMapping("/{id}")
+    public Usuario update(@PathVariable Long id, @RequestBody Usuario usuario) {
+        usuario.setId(id);
+        return service.update(usuario);
     }
 
-    @Override
-    public Aluno findById(Long id) throws RuntimeException {
-        return UsuarioIService.findById(id);
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        service.delete(id);
     }
 }
